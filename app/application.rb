@@ -24,7 +24,7 @@ class Application
           @@cart << get_term
           resp.write "added #{get_term}\n"
         else
-          resp.write "Error #{get_term} not an item\n"
+          resp.write "We don't have that item\n"
         end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
